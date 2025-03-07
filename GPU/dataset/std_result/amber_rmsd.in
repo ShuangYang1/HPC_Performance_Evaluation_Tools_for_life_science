@@ -1,0 +1,3 @@
+parm dataset/AMBER/61k-atoms/benchmark.top
+trajin result/TestMode/AMBER/mdcrd
+rms first :* out result/TestMode/AMBER/rmsd.dat

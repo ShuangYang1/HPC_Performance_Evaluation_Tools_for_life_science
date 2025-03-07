@@ -43,9 +43,9 @@ rule all:
 
 rule sponge:
     input:
-        mdin="{pwd}/dataset/SPONGE/sponge_nvt.in",
-        parm7="{pwd}/dataset/SPONGE/Q.parm7",
-        rst7="{pwd}/dataset/SPONGE/Q.rst7"
+        mdin="{pwd}/dataset/SPONGE/data/sponge_nvt.in",
+        parm7="{pwd}/dataset/SPONGE/data/Q.parm7",
+        rst7="{pwd}/dataset/SPONGE/data/Q.rst7"
     output:
         flag=touch("{pwd}/log/{mode}/SPONGE/run.done")
     run:

@@ -1,0 +1,17 @@
+61K GlnBP benchmark
+
+ &cntrl
+  imin = 0, irest = 1,
+  nstlim = 1000000, dt = 0.002,
+  ntx = 5,
+  ntt = 1, temp0 = 300.0, tautp = 1.0,
+  ntb = 2, ntp = 1, pres0 = 1.0, taup = 5.0,
+  ntc = 2, ntf = 2,
+  ioutfm = 1, ntpr = 10000, ntwr = 25000, ntwe = 0, ntwx = 25000,
+  iwrap = 1,
+
+  ! for pmemd.cuda
+  watnam = 'TIP3', OWTNM = 'OH2'
+ /
+ &ewald
+ / 

@@ -8,6 +8,7 @@ with open("SoftwaresWeight.txt","r") as infile:
             softwares.append(line.strip().split()[0])
 import os
 from modules.TestMode.make_sbatch import make_sbatch
+from modules.TestMode.check_result import check_result
 from modules.submit import run_slurm_job
 pwd=os.getcwd()
 gpus=config.get("gpus")
@@ -20,17 +21,22 @@ rule all:
     input:
         expand("{pwd}/log/{mode}/{software}/run.done",mode=mode,software=softwares,pwd=pwd)
     run:
+        success=[]
         for software in softwares:
             if os.path.exists(f"{pwd}/log/{mode}/{software}/run.err"):
                 print(f"{software} failed")
                 os.system(f"rm {pwd}/log/{mode}/{software}/run.err")
                 os.system(f"rm {pwd}/log/{mode}/{software}/run.done")
+            else:
+                success.append(software)
+        for software in success:
+            check_result(software)
 
 rule sponge_test:
     input:
-        mdin="{pwd}/dataset/SPONGE/sponge_nvt.in",
-        parm7="{pwd}/dataset/SPONGE/Q.parm7",
-        rst7="{pwd}/dataset/SPONGE/Q.rst7"
+        mdin="{pwd}/dataset/SPONGE/TestMode/sponge_nvt.in",
+        parm7="{pwd}/dataset/SPONGE/data/Q.parm7",
+        rst7="{pwd}/dataset/SPONGE/data/Q.rst7"
     output:
         flag=touch("{pwd}/log/{mode}/SPONGE/run.done")
     run:
@@ -44,7 +50,7 @@ rule sponge_test:
 
 rule gromacs_test:
     input:
-        tpr="{pwd}/dataset/GROMACS/20k-atoms/benchmark.tpr"
+        tpr="{pwd}/dataset/GROMACS/61k-atoms/benchmark.tpr"
     output:
         flag=touch("{pwd}/log/{mode}/GROMACS/run.done")
     run:
@@ -59,9 +65,9 @@ rule gromacs_test:
 
 rule amber_test:
     input:
-        mdin="{pwd}/dataset/AMBER/20k-atoms/benchmark.in",
-        top="{pwd}/dataset/AMBER/20k-atoms/benchmark.top",
-        rst="{pwd}/dataset/AMBER/20k-atoms/benchmark.rst"
+        mdin="{pwd}/dataset/AMBER/TestMode/61k-atoms/benchmark.in",
+        top="{pwd}/dataset/AMBER/61k-atoms/benchmark.top",
+        rst="{pwd}/dataset/AMBER/61k-atoms/benchmark.rst"
     output:
         flag=touch("{pwd}/log/{mode}/AMBER/run.done")
     run:

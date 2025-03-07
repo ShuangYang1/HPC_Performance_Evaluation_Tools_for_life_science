@@ -37,9 +37,9 @@ rule all:
 
 rule sponge:
     input:
-        mdin="{pwd}/dataset/SPONGE/sponge_nvt.in",
-        parm7="{pwd}/dataset/SPONGE/Q.parm7",
-        rst7="{pwd}/dataset/SPONGE/Q.rst7"
+        mdin="{pwd}/dataset/SPONGE/data/sponge_nvt.in",
+        parm7="{pwd}/dataset/SPONGE/data/Q.parm7",
+        rst7="{pwd}/dataset/SPONGE/data/Q.rst7"
     output:
         flag=touch("{pwd}/log/{mode}/SPONGE/run.done")
     run:
@@ -48,7 +48,7 @@ rule sponge:
             os.makedirs(script_path)
         for count in range(1,multitasks_count+1):
             os.system(f"mkdir -p {pwd}/dataset/SPONGE_multitasks/{count}")
-            os.system(f"cp {pwd}/dataset/SPONGE/* {pwd}/dataset/SPONGE_multitasks/{count}/")
+            os.system(f"cp {pwd}/dataset/SPONGE/data/* {pwd}/dataset/SPONGE_multitasks/{count}/")
         multitasks_script_path=f"{script_path}/multitasks.sh"
         cpus_per_task=cpus//gpus
         make_multitasks(partition=partition,nodes=1,ntasks=1,cpus_per_task=cpus_per_task,gpus=1,software="SPONGE",pwd=pwd,nodelist=nodes,multitasks_count=multitasks_count,script_path=multitasks_script_path)

@@ -67,9 +67,9 @@ def make_singletask_repeat(
                     f"gmx mdrun -ntmpi {gpus} -ntomp {cpus_per_task} -s {tpr} -noconfout -pin on -nsteps 50000 -nb gpu -bonded gpu -pme gpu -npme 1 -o ./traj.trr -cpo ./state.cpt -e ./ener.edr -g ./md.log >& {log_path}\n"
                 )
         elif software == "SPONGE":
-            mdin = f"{pwd}/dataset/SPONGE/sponge_nvt.in"
-            parm7 = f"{pwd}/dataset/SPONGE/Q.parm7"
-            rst7 = f"{pwd}/dataset/SPONGE/Q.rst7"
+            mdin = f"{pwd}/dataset/SPONGE/data/sponge_nvt.in"
+            parm7 = f"{pwd}/dataset/SPONGE/data/Q.parm7"
+            rst7 = f"{pwd}/dataset/SPONGE/data/Q.rst7"
             f.write(
                 f"SPONGE -mdin {mdin} -amber_parm7 {parm7} -amber_rst7 {rst7} >& {log_path}\n"
             )

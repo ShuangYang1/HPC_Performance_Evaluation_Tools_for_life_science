@@ -34,21 +34,21 @@ def make_sbatch(
         f.write(f"mkdir -p {resultdir}\n")
         f.write(f"cd {resultdir}\n")
         if software == "AMBER":
-            mdin = f"{pwd}/dataset/AMBER/20k-atoms/benchmark.in"
-            top = f"{pwd}/dataset/AMBER/20k-atoms/benchmark.top"
-            rst = f"{pwd}/dataset/AMBER/20k-atoms/benchmark.rst"
+            mdin = f"{pwd}/dataset/AMBER/TestMode/61k-atoms/benchmark.in"
+            top = f"{pwd}/dataset/AMBER/61k-atoms/benchmark.top"
+            rst = f"{pwd}/dataset/AMBER/61k-atoms/benchmark.rst"
             f.write(
                 f"mpirun -np {gpus} pmemd.cuda.MPI -O -o ./mdout -i {mdin} -p {top} -c {rst} >& {log_path}\n"
             )
         elif software == "GROMACS":
-            tpr = f"{pwd}/dataset/GROMACS/20k-atoms/benchmark.tpr"
+            tpr = f"{pwd}/dataset/GROMACS/61k-atoms/benchmark.tpr"
             f.write(
-                f"gmx mdrun -ntmpi {gpus} -ntomp {cpus_per_task} -s {tpr} -noconfout -pin on -nsteps 50000 -nb gpu -bonded gpu -pme gpu -npme 1 -o ./traj.trr -cpo ./state.cpt -e ./ener.edr -g ./md.log >& {log_path}\n"
+                f"gmx mdrun -ntmpi {gpus} -ntomp {cpus_per_task} -s {tpr} -noconfout -pin on -nsteps 1000000 -nb gpu -bonded gpu -pme gpu -npme 1 -o ./traj.trr -cpo ./state.cpt -e ./ener.edr -g ./md.log >& {log_path}\n"
             )
         elif software == "SPONGE":
-            mdin = f"{pwd}/dataset/SPONGE/sponge_nvt.in"
-            parm7 = f"{pwd}/dataset/SPONGE/Q.parm7"
-            rst7 = f"{pwd}/dataset/SPONGE/Q.rst7"
+            mdin = f"{pwd}/dataset/SPONGE/TestMode/sponge_nvt.in"
+            parm7 = f"{pwd}/dataset/SPONGE/data/Q.parm7"
+            rst7 = f"{pwd}/dataset/SPONGE/data/Q.rst7"
             f.write(
                 f"SPONGE -mdin {mdin} -amber_parm7 {parm7} -amber_rst7 {rst7} >& {log_path}\n"
             )
