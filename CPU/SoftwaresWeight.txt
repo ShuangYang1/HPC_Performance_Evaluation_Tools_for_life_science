@@ -1,0 +1,6 @@
+BWA 1
+SPAdes  1
+Bismark 1
+STAR    1
+Cellranger  1
+GATK    1

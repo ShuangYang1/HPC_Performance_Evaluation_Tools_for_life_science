@@ -1,0 +1,12 @@
+partition: gpu_partition
+node: node_name
+gpus: 8
+cpus: 32
+multitasks_count: 50
+repeat: 10
+node_exporter_port: 9100
+gpu_exporter_port: 9445
+server_ip: 127.0.0.1
+server_port: 9090
+conda_path: ~/anaconda3
+dsdp_env: DSDP

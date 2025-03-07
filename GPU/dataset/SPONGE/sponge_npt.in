@@ -1,0 +1,9 @@
+test nvt simulation speed of SPONGE
+mode = npt
+thermostat = middle_langevin
+barostat = berendsen_barostat
+middle_langevin_gamma = 3
+dt = 2e-3
+constrain_mode = SHAKE
+cutoff = 8
+step_limit = 5000

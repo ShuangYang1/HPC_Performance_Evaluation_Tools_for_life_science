@@ -1,0 +1,10 @@
+partition: cpu_partition
+node: node1
+cpus: 56
+mem_mb: 540663
+multitasks_count: 50
+repeat: 10
+node_exporter_port: 9100
+server_ip: 127.0.0.1
+server_port: 9090
+delete-intermediate-files: false

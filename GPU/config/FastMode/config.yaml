@@ -1,0 +1,5 @@
+partition: gpu_partition
+gpus: 8
+cpus: 32
+conda_path: ~/anaconda3
+dsdp_env: DSDP
