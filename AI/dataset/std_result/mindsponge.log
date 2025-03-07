@@ -1,0 +1,261 @@
+[MindSPONGE] 1 H-Adding task with 2529 atoms complete in 0.112 seconds.
+[MindSPONGE] Started simulation at 2025-02-25 17:49:38
+[MindSPONGE] Compilation Time: 1.42s
+[MindSPONGE] Step: 0, E_pot: 141277.78, Time: 1418.39ms
+[MindSPONGE] Step: 10, E_pot: 96861.06, Time: 36.65ms
+[MindSPONGE] Step: 20, E_pot: 75968.81, Time: 35.68ms
+[MindSPONGE] Step: 30, E_pot: 62559.887, Time: 35.56ms
+[MindSPONGE] Step: 40, E_pot: 53021.836, Time: 35.03ms
+[MindSPONGE] Step: 50, E_pot: 45810.742, Time: 34.36ms
+[MindSPONGE] Step: 60, E_pot: 40129.08, Time: 34.35ms
+[MindSPONGE] Step: 70, E_pot: 35518.992, Time: 34.49ms
+[MindSPONGE] Step: 80, E_pot: 31696.496, Time: 34.05ms
+[MindSPONGE] Step: 90, E_pot: 28473.766, Time: 34.40ms
+[MindSPONGE] Step: 100, E_pot: 25719.992, Time: 34.27ms
+[MindSPONGE] Step: 110, E_pot: 23340.133, Time: 34.22ms
+[MindSPONGE] Step: 120, E_pot: 21262.91, Time: 33.95ms
+[MindSPONGE] Step: 130, E_pot: 19433.643, Time: 34.08ms
+[MindSPONGE] Step: 140, E_pot: 17809.635, Time: 34.20ms
+[MindSPONGE] Step: 150, E_pot: 16357.133, Time: 33.76ms
+[MindSPONGE] Step: 160, E_pot: 15049.178, Time: 34.39ms
+[MindSPONGE] Step: 170, E_pot: 13864.041, Time: 34.60ms
+[MindSPONGE] Step: 180, E_pot: 12784.127, Time: 33.99ms
+[MindSPONGE] Step: 190, E_pot: 11794.961, Time: 34.42ms
+[MindSPONGE] Step: 200, E_pot: 10884.645, Time: 33.93ms
+[MindSPONGE] Step: 210, E_pot: 10043.273, Time: 34.42ms
+[MindSPONGE] Step: 220, E_pot: 9262.637, Time: 34.23ms
+[MindSPONGE] Step: 230, E_pot: 8535.76, Time: 34.40ms
+[MindSPONGE] Step: 240, E_pot: 7856.7695, Time: 34.04ms
+[MindSPONGE] Step: 250, E_pot: 7220.6035, Time: 34.18ms
+[MindSPONGE] Step: 260, E_pot: 6622.9863, Time: 34.13ms
+[MindSPONGE] Step: 270, E_pot: 6060.1836, Time: 34.16ms
+[MindSPONGE] Step: 280, E_pot: 5528.957, Time: 34.68ms
+[MindSPONGE] Step: 290, E_pot: 5026.49, Time: 34.26ms
+[MindSPONGE] Step: 300, E_pot: 4550.3086, Time: 34.39ms
+[MindSPONGE] Step: 310, E_pot: 4098.2344, Time: 34.06ms
+[MindSPONGE] Step: 320, E_pot: 3668.3457, Time: 33.94ms
+[MindSPONGE] Step: 330, E_pot: 3258.9375, Time: 34.46ms
+[MindSPONGE] Step: 340, E_pot: 2868.4727, Time: 34.17ms
+[MindSPONGE] Step: 350, E_pot: 2495.6016, Time: 33.95ms
+[MindSPONGE] Step: 360, E_pot: 2139.0742, Time: 34.29ms
+[MindSPONGE] Step: 370, E_pot: 1797.7852, Time: 34.71ms
+[MindSPONGE] Step: 380, E_pot: 1470.7539, Time: 34.69ms
+[MindSPONGE] Step: 390, E_pot: 1157.0391, Time: 34.48ms
+[MindSPONGE] Step: 400, E_pot: 855.81836, Time: 34.32ms
+[MindSPONGE] Step: 410, E_pot: 566.35547, Time: 34.89ms
+[MindSPONGE] Step: 420, E_pot: 287.90625, Time: 34.71ms
+[MindSPONGE] Step: 430, E_pot: 19.882812, Time: 34.18ms
+[MindSPONGE] Step: 440, E_pot: -238.3086, Time: 34.38ms
+[MindSPONGE] Step: 450, E_pot: -487.24414, Time: 34.52ms
+[MindSPONGE] Step: 460, E_pot: -727.4121, Time: 34.06ms
+[MindSPONGE] Step: 470, E_pot: -959.2578, Time: 33.93ms
+[MindSPONGE] Step: 480, E_pot: -1183.2617, Time: 34.15ms
+[MindSPONGE] Step: 490, E_pot: -1399.793, Time: 34.12ms
+[MindSPONGE] Finished simulation at 2025-02-25 17:49:57
+[MindSPONGE] Simulation time: 18.30 seconds.
+--------------------------------------------------------------------------------
+[MindSPONGE] Started simulation at 2025-02-25 17:49:57
+[MindSPONGE] Compilation Time: 0.37s
+[MindSPONGE] Step: 0, E_pot: -1609.252, E_kin: 9732.277, E_tot: 8123.0254, Temperature: 308.68246, Time: 369.92ms
+[MindSPONGE] Step: 10, E_pot: -2447.3809, E_kin: 9971.317, E_tot: 7523.9365, Temperature: 316.26422, Time: 57.88ms
+[MindSPONGE] Step: 20, E_pot: -2865.9492, E_kin: 11242.53, E_tot: 8376.581, Temperature: 356.58377, Time: 57.96ms
+[MindSPONGE] Step: 30, E_pot: -1450.2812, E_kin: 9897.977, E_tot: 8447.695, Temperature: 313.93802, Time: 59.05ms
+[MindSPONGE] Step: 40, E_pot: -3292.7617, E_kin: 11915.196, E_tot: 8622.435, Temperature: 377.91898, Time: 59.59ms
+[MindSPONGE] Step: 50, E_pot: -2712.0996, E_kin: 11075.832, E_tot: 8363.732, Temperature: 351.2965, Time: 61.07ms
+[MindSPONGE] Step: 60, E_pot: -2902.496, E_kin: 11031.978, E_tot: 8129.4814, Temperature: 349.90558, Time: 61.16ms
+[MindSPONGE] Step: 70, E_pot: -3296.0664, E_kin: 11467.471, E_tot: 8171.4043, Temperature: 363.7183, Time: 62.84ms
+[MindSPONGE] Step: 80, E_pot: -2371.0918, E_kin: 10601.763, E_tot: 8230.671, Temperature: 336.26028, Time: 64.04ms
+[MindSPONGE] Step: 90, E_pot: -3231.9219, E_kin: 11444.871, E_tot: 8212.949, Temperature: 363.0015, Time: 65.98ms
+[MindSPONGE] Step: 100, E_pot: -3205.1484, E_kin: 11343.709, E_tot: 8138.5605, Temperature: 359.79288, Time: 54.81ms
+[MindSPONGE] Step: 110, E_pot: -2956.4043, E_kin: 10889.179, E_tot: 7932.7744, Temperature: 345.37637, Time: 65.95ms
+[MindSPONGE] Step: 120, E_pot: -3528.707, E_kin: 11492.69, E_tot: 7963.9834, Temperature: 364.5182, Time: 67.32ms
+[MindSPONGE] Step: 130, E_pot: -3220.6738, E_kin: 11071.125, E_tot: 7850.451, Temperature: 351.14725, Time: 65.85ms
+[MindSPONGE] Step: 140, E_pot: -3400.5059, E_kin: 11285.012, E_tot: 7884.506, Temperature: 357.93118, Time: 69.22ms
+[MindSPONGE] Step: 150, E_pot: -3379.4785, E_kin: 11171.735, E_tot: 7792.257, Temperature: 354.33832, Time: 70.68ms
+[MindSPONGE] Step: 160, E_pot: -3609.4375, E_kin: 11295.727, E_tot: 7686.289, Temperature: 358.271, Time: 68.78ms
+[MindSPONGE] Step: 170, E_pot: -3504.9023, E_kin: 11188.303, E_tot: 7683.4004, Temperature: 354.8638, Time: 72.50ms
+[MindSPONGE] Step: 180, E_pot: -3640.498, E_kin: 11099.987, E_tot: 7459.4893, Temperature: 352.06265, Time: 74.89ms
+[MindSPONGE] Step: 190, E_pot: -3768.5625, E_kin: 11142.881, E_tot: 7374.3184, Temperature: 353.42316, Time: 72.86ms
+[MindSPONGE] Step: 200, E_pot: -3773.043, E_kin: 11055.51, E_tot: 7282.467, Temperature: 350.65195, Time: 75.38ms
+[MindSPONGE] Step: 210, E_pot: -3815.3555, E_kin: 11017.412, E_tot: 7202.0566, Temperature: 349.4436, Time: 76.27ms
+[MindSPONGE] Step: 220, E_pot: -3846.955, E_kin: 10886.749, E_tot: 7039.794, Temperature: 345.29932, Time: 78.59ms
+[MindSPONGE] Step: 230, E_pot: -4165.6094, E_kin: 10986.834, E_tot: 6821.2246, Temperature: 348.47372, Time: 78.13ms
+[MindSPONGE] Step: 240, E_pot: -3908.3125, E_kin: 10664.995, E_tot: 6756.6826, Temperature: 338.26587, Time: 77.54ms
+[MindSPONGE] Step: 250, E_pot: -3996.9668, E_kin: 10772.229, E_tot: 6775.2617, Temperature: 341.66702, Time: 78.34ms
+[MindSPONGE] Step: 260, E_pot: -3914.0469, E_kin: 10702.801, E_tot: 6788.754, Temperature: 339.46494, Time: 82.34ms
+[MindSPONGE] Step: 270, E_pot: -4101.7383, E_kin: 10782.809, E_tot: 6681.0703, Temperature: 342.0026, Time: 82.94ms
+[MindSPONGE] Step: 280, E_pot: -4173.7324, E_kin: 10789.782, E_tot: 6616.05, Temperature: 342.2238, Time: 85.86ms
+[MindSPONGE] Step: 290, E_pot: -4442.783, E_kin: 10993.683, E_tot: 6550.8994, Temperature: 348.69095, Time: 85.40ms
+[MindSPONGE] Step: 300, E_pot: -4154.9023, E_kin: 10708.314, E_tot: 6553.412, Temperature: 339.63983, Time: 84.07ms
+[MindSPONGE] Step: 310, E_pot: -4319.42, E_kin: 10851.111, E_tot: 6531.6914, Temperature: 344.16898, Time: 87.21ms
+[MindSPONGE] Step: 320, E_pot: -4504.758, E_kin: 10854.411, E_tot: 6349.6533, Temperature: 344.27362, Time: 83.63ms
+[MindSPONGE] Step: 330, E_pot: -4455.211, E_kin: 10704.414, E_tot: 6249.203, Temperature: 339.51614, Time: 88.55ms
+[MindSPONGE] Step: 340, E_pot: -4483.074, E_kin: 10693.745, E_tot: 6210.671, Temperature: 339.17773, Time: 92.49ms
+[MindSPONGE] Step: 350, E_pot: -4414.9375, E_kin: 10606.299, E_tot: 6191.3613, Temperature: 336.40414, Time: 94.69ms
+[MindSPONGE] Step: 360, E_pot: -4547.291, E_kin: 10670.3125, E_tot: 6123.0215, Temperature: 338.4345, Time: 95.07ms
+[MindSPONGE] Step: 370, E_pot: -4827.8887, E_kin: 10929.848, E_tot: 6101.959, Temperature: 346.6663, Time: 94.00ms
+[MindSPONGE] Step: 380, E_pot: -4941.6484, E_kin: 10874.201, E_tot: 5932.5527, Temperature: 344.90134, Time: 98.34ms
+[MindSPONGE] Step: 390, E_pot: -4759.4336, E_kin: 10687.972, E_tot: 5928.538, Temperature: 338.99463, Time: 99.10ms
+[MindSPONGE] Step: 400, E_pot: -4825.4727, E_kin: 10696.791, E_tot: 5871.3184, Temperature: 339.27435, Time: 99.83ms
+[MindSPONGE] Step: 410, E_pot: -4619.4805, E_kin: 10442.664, E_tot: 5823.1836, Temperature: 331.2141, Time: 99.12ms
+[MindSPONGE] Step: 420, E_pot: -4747.0312, E_kin: 10618.459, E_tot: 5871.4277, Temperature: 336.78983, Time: 100.58ms
+[MindSPONGE] Step: 430, E_pot: -4637.1855, E_kin: 10529.192, E_tot: 5892.007, Temperature: 333.95853, Time: 104.62ms
+[MindSPONGE] Step: 440, E_pot: -4835.588, E_kin: 10609.507, E_tot: 5773.919, Temperature: 336.5059, Time: 105.62ms
+[MindSPONGE] Step: 450, E_pot: -5020.244, E_kin: 10648.709, E_tot: 5628.465, Temperature: 337.7493, Time: 105.88ms
+[MindSPONGE] Step: 460, E_pot: -5061.828, E_kin: 10644.525, E_tot: 5582.6973, Temperature: 337.6166, Time: 106.05ms
+[MindSPONGE] Step: 470, E_pot: -5006.6914, E_kin: 10596.83, E_tot: 5590.1387, Temperature: 336.10385, Time: 108.71ms
+[MindSPONGE] Step: 480, E_pot: -5006.301, E_kin: 10618.818, E_tot: 5612.5176, Temperature: 336.80124, Time: 111.80ms
+[MindSPONGE] Step: 490, E_pot: -4921.246, E_kin: 10525.112, E_tot: 5603.866, Temperature: 333.82913, Time: 110.01ms
+[MindSPONGE] Step: 500, E_pot: -5106.3984, E_kin: 10622.883, E_tot: 5516.4844, Temperature: 336.93015, Time: 111.31ms
+[MindSPONGE] Step: 510, E_pot: -5103.9707, E_kin: 10512.048, E_tot: 5408.077, Temperature: 333.41476, Time: 112.70ms
+[MindSPONGE] Step: 520, E_pot: -5045.867, E_kin: 10395.914, E_tot: 5350.047, Temperature: 329.7313, Time: 115.61ms
+[MindSPONGE] Step: 530, E_pot: -5237.707, E_kin: 10517.936, E_tot: 5280.2285, Temperature: 333.6015, Time: 116.75ms
+[MindSPONGE] Step: 540, E_pot: -4965.211, E_kin: 10216.508, E_tot: 5251.297, Temperature: 324.04102, Time: 119.87ms
+[MindSPONGE] Step: 550, E_pot: -5244.504, E_kin: 10449.951, E_tot: 5205.4473, Temperature: 331.44522, Time: 120.41ms
+[MindSPONGE] Step: 560, E_pot: -5425.9062, E_kin: 10532.498, E_tot: 5106.592, Temperature: 334.06342, Time: 122.16ms
+[MindSPONGE] Step: 570, E_pot: -5281.451, E_kin: 10321.486, E_tot: 5040.035, Temperature: 327.37064, Time: 122.75ms
+[MindSPONGE] Step: 580, E_pot: -5449.035, E_kin: 10466.4, E_tot: 5017.365, Temperature: 331.96695, Time: 124.97ms
+[MindSPONGE] Step: 590, E_pot: -5396.33, E_kin: 10373.963, E_tot: 4977.633, Temperature: 329.03506, Time: 126.81ms
+[MindSPONGE] Step: 600, E_pot: -5542.4844, E_kin: 10481.764, E_tot: 4939.2793, Temperature: 332.45425, Time: 129.94ms
+[MindSPONGE] Step: 610, E_pot: -5625.25, E_kin: 10483.9795, E_tot: 4858.7295, Temperature: 332.52454, Time: 130.29ms
+[MindSPONGE] Step: 620, E_pot: -5246.1094, E_kin: 10153.806, E_tot: 4907.6963, Temperature: 322.05228, Time: 131.36ms
+[MindSPONGE] Step: 630, E_pot: -5450.8438, E_kin: 10289.321, E_tot: 4838.4775, Temperature: 326.35043, Time: 132.04ms
+[MindSPONGE] Step: 640, E_pot: -5492.58, E_kin: 10297.016, E_tot: 4804.4355, Temperature: 326.5945, Time: 53.80ms
+[MindSPONGE] Step: 650, E_pot: -5643.551, E_kin: 10337.859, E_tot: 4694.3086, Temperature: 327.88995, Time: 57.45ms
+[MindSPONGE] Step: 660, E_pot: -5668.824, E_kin: 10365.211, E_tot: 4696.3867, Temperature: 328.75748, Time: 58.38ms
+[MindSPONGE] Step: 670, E_pot: -5374.3125, E_kin: 10123.365, E_tot: 4749.0527, Temperature: 321.08676, Time: 59.49ms
+[MindSPONGE] Step: 680, E_pot: -5459.869, E_kin: 10187.965, E_tot: 4728.0957, Temperature: 323.1357, Time: 58.72ms
+[MindSPONGE] Step: 690, E_pot: -5395.7266, E_kin: 10037.018, E_tot: 4641.291, Temperature: 318.34805, Time: 61.16ms
+[MindSPONGE] Step: 700, E_pot: -5515.0723, E_kin: 10129.686, E_tot: 4614.6133, Temperature: 321.28723, Time: 61.39ms
+[MindSPONGE] Step: 710, E_pot: -5568.1836, E_kin: 10215.076, E_tot: 4646.8926, Temperature: 323.99557, Time: 64.58ms
+[MindSPONGE] Step: 720, E_pot: -5515.674, E_kin: 10074.941, E_tot: 4559.2676, Temperature: 319.55087, Time: 65.01ms
+[MindSPONGE] Step: 730, E_pot: -5694.0, E_kin: 10256.088, E_tot: 4562.088, Temperature: 325.2964, Time: 64.69ms
+[MindSPONGE] Step: 740, E_pot: -5578.4355, E_kin: 10080.6045, E_tot: 4502.169, Temperature: 319.7305, Time: 62.26ms
+[MindSPONGE] Step: 750, E_pot: -5730.824, E_kin: 10268.103, E_tot: 4537.2783, Temperature: 325.67746, Time: 63.28ms
+[MindSPONGE] Step: 760, E_pot: -5537.0312, E_kin: 10085.912, E_tot: 4548.881, Temperature: 319.89883, Time: 65.32ms
+[MindSPONGE] Step: 770, E_pot: -5834.3887, E_kin: 10254.541, E_tot: 4420.1523, Temperature: 325.2473, Time: 68.47ms
+[MindSPONGE] Step: 780, E_pot: -5679.0527, E_kin: 10115.873, E_tot: 4436.8203, Temperature: 320.84915, Time: 67.21ms
+[MindSPONGE] Step: 790, E_pot: -5770.1094, E_kin: 10131.27, E_tot: 4361.16, Temperature: 321.3375, Time: 67.92ms
+[MindSPONGE] Step: 800, E_pot: -5728.2324, E_kin: 10025.953, E_tot: 4297.7207, Temperature: 317.9971, Time: 70.10ms
+[MindSPONGE] Step: 810, E_pot: -5818.385, E_kin: 10060.376, E_tot: 4241.991, Temperature: 319.08893, Time: 72.50ms
+[MindSPONGE] Step: 820, E_pot: -5738.8613, E_kin: 9922.295, E_tot: 4183.4336, Temperature: 314.70932, Time: 71.38ms
+[MindSPONGE] Step: 830, E_pot: -5934.6816, E_kin: 10136.881, E_tot: 4202.199, Temperature: 321.51544, Time: 72.30ms
+[MindSPONGE] Step: 840, E_pot: -5805.246, E_kin: 10079.482, E_tot: 4274.2363, Temperature: 319.69492, Time: 74.42ms
+[MindSPONGE] Step: 850, E_pot: -5951.832, E_kin: 10117.349, E_tot: 4165.5166, Temperature: 320.89594, Time: 76.23ms
+[MindSPONGE] Step: 860, E_pot: -5847.709, E_kin: 9987.6, E_tot: 4139.8906, Temperature: 316.78064, Time: 77.24ms
+[MindSPONGE] Step: 870, E_pot: -6113.4766, E_kin: 10137.023, E_tot: 4023.5469, Temperature: 321.51996, Time: 76.69ms
+[MindSPONGE] Step: 880, E_pot: -6108.5273, E_kin: 10121.737, E_tot: 4013.21, Temperature: 321.03513, Time: 76.55ms
+[MindSPONGE] Step: 890, E_pot: -6057.047, E_kin: 10108.316, E_tot: 4051.2695, Temperature: 320.60944, Time: 80.45ms
+[MindSPONGE] Step: 900, E_pot: -6109.0977, E_kin: 10177.363, E_tot: 4068.2656, Temperature: 322.79947, Time: 79.04ms
+[MindSPONGE] Step: 910, E_pot: -6021.7227, E_kin: 10035.732, E_tot: 4014.0098, Temperature: 318.30728, Time: 84.24ms
+[MindSPONGE] Step: 920, E_pot: -6133.4277, E_kin: 10147.33, E_tot: 4013.9023, Temperature: 321.84686, Time: 84.44ms
+[MindSPONGE] Step: 930, E_pot: -6024.1914, E_kin: 10018.163, E_tot: 3993.9717, Temperature: 317.75003, Time: 87.34ms
+[MindSPONGE] Step: 940, E_pot: -6124.043, E_kin: 10114.181, E_tot: 3990.1377, Temperature: 320.79547, Time: 84.56ms
+[MindSPONGE] Step: 950, E_pot: -6198.7207, E_kin: 10141.665, E_tot: 3942.9443, Temperature: 321.66718, Time: 86.89ms
+[MindSPONGE] Step: 960, E_pot: -6097.8125, E_kin: 10059.824, E_tot: 3962.0117, Temperature: 319.0714, Time: 90.10ms
+[MindSPONGE] Step: 970, E_pot: -5995.203, E_kin: 9962.327, E_tot: 3967.124, Temperature: 315.97906, Time: 90.63ms
+[MindSPONGE] Step: 980, E_pot: -6194.164, E_kin: 10087.73, E_tot: 3893.5664, Temperature: 319.9565, Time: 93.02ms
+[MindSPONGE] Step: 990, E_pot: -6163.793, E_kin: 10047.7705, E_tot: 3883.9775, Temperature: 318.6891, Time: 91.49ms
+[MindSPONGE] Step: 1000, E_pot: -6058.746, E_kin: 9938.469, E_tot: 3879.7227, Temperature: 315.22232, Time: 95.80ms
+[MindSPONGE] Step: 1010, E_pot: -6089.4336, E_kin: 10039.977, E_tot: 3950.543, Temperature: 318.4419, Time: 97.03ms
+[MindSPONGE] Step: 1020, E_pot: -6071.3438, E_kin: 10076.638, E_tot: 4005.294, Temperature: 319.6047, Time: 95.26ms
+[MindSPONGE] Step: 1030, E_pot: -6307.84, E_kin: 10239.121, E_tot: 3931.2812, Temperature: 324.75824, Time: 99.23ms
+[MindSPONGE] Step: 1040, E_pot: -6380.086, E_kin: 10247.506, E_tot: 3867.42, Temperature: 325.0242, Time: 101.01ms
+[MindSPONGE] Step: 1050, E_pot: -6122.508, E_kin: 9970.514, E_tot: 3848.0059, Temperature: 316.2387, Time: 100.22ms
+[MindSPONGE] Step: 1060, E_pot: -6124.3906, E_kin: 9984.225, E_tot: 3859.834, Temperature: 316.67358, Time: 100.73ms
+[MindSPONGE] Step: 1070, E_pot: -6149.084, E_kin: 10082.598, E_tot: 3933.5137, Temperature: 319.79373, Time: 102.96ms
+[MindSPONGE] Step: 1080, E_pot: -5922.8984, E_kin: 9943.795, E_tot: 4020.8965, Temperature: 315.39127, Time: 103.03ms
+[MindSPONGE] Step: 1090, E_pot: -6269.7266, E_kin: 10279.04, E_tot: 4009.3135, Temperature: 326.02435, Time: 106.98ms
+[MindSPONGE] Step: 1100, E_pot: -6138.674, E_kin: 10109.997, E_tot: 3971.3232, Temperature: 320.66275, Time: 106.29ms
+[MindSPONGE] Step: 1110, E_pot: -6226.5938, E_kin: 10214.851, E_tot: 3988.2568, Temperature: 323.98843, Time: 107.69ms
+[MindSPONGE] Step: 1120, E_pot: -6113.4023, E_kin: 10037.2705, E_tot: 3923.8682, Temperature: 318.35608, Time: 109.72ms
+[MindSPONGE] Step: 1130, E_pot: -5965.4297, E_kin: 10014.363, E_tot: 4048.9336, Temperature: 317.6295, Time: 111.17ms
+[MindSPONGE] Step: 1140, E_pot: -6029.328, E_kin: 10112.259, E_tot: 4082.9307, Temperature: 320.7345, Time: 113.57ms
+[MindSPONGE] Step: 1150, E_pot: -6243.3125, E_kin: 10254.211, E_tot: 4010.8984, Temperature: 325.23685, Time: 114.20ms
+[MindSPONGE] Step: 1160, E_pot: -6259.3555, E_kin: 10286.396, E_tot: 4027.041, Temperature: 326.2577, Time: 113.53ms
+[MindSPONGE] Step: 1170, E_pot: -6336.205, E_kin: 10363.656, E_tot: 4027.4512, Temperature: 328.70816, Time: 116.86ms
+[MindSPONGE] Step: 1180, E_pot: -6231.5645, E_kin: 10144.627, E_tot: 3913.0625, Temperature: 321.76114, Time: 117.49ms
+[MindSPONGE] Step: 1190, E_pot: -6003.9688, E_kin: 9899.19, E_tot: 3895.2217, Temperature: 313.97653, Time: 119.38ms
+[MindSPONGE] Step: 1200, E_pot: -6011.842, E_kin: 9903.261, E_tot: 3891.419, Temperature: 314.10562, Time: 120.62ms
+[MindSPONGE] Step: 1210, E_pot: -6479.832, E_kin: 10314.537, E_tot: 3834.705, Temperature: 327.15024, Time: 125.39ms
+[MindSPONGE] Step: 1220, E_pot: -6702.676, E_kin: 10403.013, E_tot: 3700.337, Temperature: 329.95645, Time: 125.61ms
+[MindSPONGE] Step: 1230, E_pot: -6469.213, E_kin: 10091.903, E_tot: 3622.6904, Temperature: 320.08887, Time: 125.52ms
+[MindSPONGE] Step: 1240, E_pot: -6245.199, E_kin: 9863.11, E_tot: 3617.9111, Temperature: 312.83218, Time: 128.02ms
+[MindSPONGE] Step: 1250, E_pot: -6239.797, E_kin: 9834.915, E_tot: 3595.1182, Temperature: 311.93787, Time: 130.98ms
+[MindSPONGE] Step: 1260, E_pot: -6340.1406, E_kin: 9923.091, E_tot: 3582.9502, Temperature: 314.7346, Time: 131.59ms
+[MindSPONGE] Step: 1270, E_pot: -6218.8164, E_kin: 9754.086, E_tot: 3535.2695, Temperature: 309.37418, Time: 133.24ms
+[MindSPONGE] Step: 1280, E_pot: -6265.8906, E_kin: 9849.986, E_tot: 3584.0957, Temperature: 312.4159, Time: 52.75ms
+[MindSPONGE] Step: 1290, E_pot: -6397.4863, E_kin: 9950.967, E_tot: 3553.4805, Temperature: 315.61874, Time: 56.70ms
+[MindSPONGE] Step: 1300, E_pot: -6414.547, E_kin: 9910.154, E_tot: 3495.6074, Temperature: 314.32428, Time: 57.91ms
+[MindSPONGE] Step: 1310, E_pot: -6374.0117, E_kin: 9908.835, E_tot: 3534.8232, Temperature: 314.2824, Time: 58.43ms
+[MindSPONGE] Step: 1320, E_pot: -6436.75, E_kin: 10006.287, E_tot: 3569.537, Temperature: 317.37335, Time: 59.33ms
+[MindSPONGE] Step: 1330, E_pot: -6319.869, E_kin: 9846.359, E_tot: 3526.4902, Temperature: 312.30084, Time: 60.37ms
+[MindSPONGE] Step: 1340, E_pot: -6439.5625, E_kin: 9905.508, E_tot: 3465.9453, Temperature: 314.17688, Time: 61.48ms
+[MindSPONGE] Step: 1350, E_pot: -6447.297, E_kin: 9860.926, E_tot: 3413.629, Temperature: 312.76285, Time: 62.09ms
+[MindSPONGE] Step: 1360, E_pot: -6440.246, E_kin: 9837.748, E_tot: 3397.502, Temperature: 312.02774, Time: 63.72ms
+[MindSPONGE] Step: 1370, E_pot: -6239.5645, E_kin: 9592.053, E_tot: 3352.4883, Temperature: 304.23492, Time: 64.08ms
+[MindSPONGE] Step: 1380, E_pot: -6321.949, E_kin: 9661.957, E_tot: 3340.0078, Temperature: 306.4521, Time: 65.22ms
+[MindSPONGE] Step: 1390, E_pot: -6233.582, E_kin: 9599.992, E_tot: 3366.4102, Temperature: 304.48672, Time: 66.14ms
+[MindSPONGE] Step: 1400, E_pot: -6489.254, E_kin: 9805.325, E_tot: 3316.0713, Temperature: 310.99936, Time: 67.57ms
+[MindSPONGE] Step: 1410, E_pot: -6338.164, E_kin: 9734.072, E_tot: 3395.9082, Temperature: 308.7394, Time: 66.98ms
+[MindSPONGE] Step: 1420, E_pot: -6236.043, E_kin: 9645.561, E_tot: 3409.5176, Temperature: 305.93204, Time: 69.86ms
+[MindSPONGE] Step: 1430, E_pot: -6379.3984, E_kin: 9904.559, E_tot: 3525.1602, Temperature: 314.1468, Time: 68.27ms
+[MindSPONGE] Step: 1440, E_pot: -6482.8047, E_kin: 10023.758, E_tot: 3540.9531, Temperature: 317.9275, Time: 71.00ms
+[MindSPONGE] Step: 1450, E_pot: -6553.1484, E_kin: 9902.326, E_tot: 3349.1777, Temperature: 314.076, Time: 70.22ms
+[MindSPONGE] Step: 1460, E_pot: -6420.037, E_kin: 9775.916, E_tot: 3355.879, Temperature: 310.0666, Time: 73.53ms
+[MindSPONGE] Step: 1470, E_pot: -6498.1836, E_kin: 9881.713, E_tot: 3383.5293, Temperature: 313.42218, Time: 71.91ms
+[MindSPONGE] Step: 1480, E_pot: -6596.5625, E_kin: 9960.191, E_tot: 3363.629, Temperature: 315.91132, Time: 75.85ms
+[MindSPONGE] Step: 1490, E_pot: -6469.0977, E_kin: 9854.037, E_tot: 3384.9395, Temperature: 312.54437, Time: 73.19ms
+[MindSPONGE] Step: 1500, E_pot: -6505.504, E_kin: 9880.377, E_tot: 3374.873, Temperature: 313.37982, Time: 70.91ms
+[MindSPONGE] Step: 1510, E_pot: -6515.8477, E_kin: 9906.666, E_tot: 3390.8184, Temperature: 314.21362, Time: 78.54ms
+[MindSPONGE] Step: 1520, E_pot: -6328.9023, E_kin: 9660.443, E_tot: 3331.541, Temperature: 306.40408, Time: 76.51ms
+[MindSPONGE] Step: 1530, E_pot: -6606.0547, E_kin: 9964.607, E_tot: 3358.5527, Temperature: 316.0514, Time: 76.07ms
+[MindSPONGE] Step: 1540, E_pot: -6474.074, E_kin: 9787.353, E_tot: 3313.2783, Temperature: 310.4293, Time: 80.88ms
+[MindSPONGE] Step: 1550, E_pot: -6415.9688, E_kin: 9774.316, E_tot: 3358.3477, Temperature: 310.01584, Time: 83.61ms
+[MindSPONGE] Step: 1560, E_pot: -6497.25, E_kin: 9903.334, E_tot: 3406.084, Temperature: 314.10797, Time: 83.39ms
+[MindSPONGE] Step: 1570, E_pot: -6417.7637, E_kin: 9793.068, E_tot: 3375.3047, Temperature: 310.61063, Time: 84.12ms
+[MindSPONGE] Step: 1580, E_pot: -6513.6875, E_kin: 9799.882, E_tot: 3286.1943, Temperature: 310.82672, Time: 87.49ms
+[MindSPONGE] Step: 1590, E_pot: -6388.42, E_kin: 9702.856, E_tot: 3314.4365, Temperature: 307.74933, Time: 88.73ms
+[MindSPONGE] Step: 1600, E_pot: -6495.254, E_kin: 9813.669, E_tot: 3318.415, Temperature: 311.264, Time: 91.04ms
+[MindSPONGE] Step: 1610, E_pot: -6519.658, E_kin: 9840.461, E_tot: 3320.8027, Temperature: 312.11377, Time: 90.22ms
+[MindSPONGE] Step: 1620, E_pot: -6462.6836, E_kin: 9785.219, E_tot: 3322.5352, Temperature: 310.36163, Time: 90.00ms
+[MindSPONGE] Step: 1630, E_pot: -6746.9453, E_kin: 10006.67, E_tot: 3259.7246, Temperature: 317.3855, Time: 92.44ms
+[MindSPONGE] Step: 1640, E_pot: -6644.467, E_kin: 9850.535, E_tot: 3206.0684, Temperature: 312.4333, Time: 95.20ms
+[MindSPONGE] Step: 1650, E_pot: -6497.8516, E_kin: 9726.988, E_tot: 3229.1367, Temperature: 308.5147, Time: 96.68ms
+[MindSPONGE] Step: 1660, E_pot: -6453.3066, E_kin: 9744.024, E_tot: 3290.7178, Temperature: 309.05508, Time: 95.61ms
+[MindSPONGE] Step: 1670, E_pot: -6760.703, E_kin: 10001.177, E_tot: 3240.4736, Temperature: 317.21127, Time: 96.80ms
+[MindSPONGE] Step: 1680, E_pot: -6707.84, E_kin: 9844.233, E_tot: 3136.3936, Temperature: 312.23343, Time: 100.12ms
+[MindSPONGE] Step: 1690, E_pot: -6663.3438, E_kin: 9825.138, E_tot: 3161.794, Temperature: 311.62775, Time: 99.83ms
+[MindSPONGE] Step: 1700, E_pot: -6745.0664, E_kin: 9833.635, E_tot: 3088.5684, Temperature: 311.89728, Time: 100.89ms
+[MindSPONGE] Step: 1710, E_pot: -6699.922, E_kin: 9780.249, E_tot: 3080.3271, Temperature: 310.204, Time: 103.90ms
+[MindSPONGE] Step: 1720, E_pot: -6679.91, E_kin: 9800.0625, E_tot: 3120.1523, Temperature: 310.83246, Time: 102.47ms
+[MindSPONGE] Step: 1730, E_pot: -6638.004, E_kin: 9666.97, E_tot: 3028.9658, Temperature: 306.61108, Time: 104.30ms
+[MindSPONGE] Step: 1740, E_pot: -6686.6523, E_kin: 9757.732, E_tot: 3071.08, Temperature: 309.48984, Time: 107.90ms
+[MindSPONGE] Step: 1750, E_pot: -6693.035, E_kin: 9771.633, E_tot: 3078.5977, Temperature: 309.93073, Time: 109.67ms
+[MindSPONGE] Step: 1760, E_pot: -6987.377, E_kin: 10011.016, E_tot: 3023.6387, Temperature: 317.52335, Time: 109.72ms
+[MindSPONGE] Step: 1770, E_pot: -6943.086, E_kin: 9946.715, E_tot: 3003.629, Temperature: 315.4839, Time: 110.70ms
+[MindSPONGE] Step: 1780, E_pot: -6666.416, E_kin: 9597.508, E_tot: 2931.0918, Temperature: 304.40796, Time: 110.33ms
+[MindSPONGE] Step: 1790, E_pot: -6649.5, E_kin: 9615.534, E_tot: 2966.0342, Temperature: 304.97968, Time: 113.99ms
+[MindSPONGE] Step: 1800, E_pot: -6613.332, E_kin: 9694.263, E_tot: 3080.9307, Temperature: 307.47675, Time: 113.95ms
+[MindSPONGE] Step: 1810, E_pot: -6706.9414, E_kin: 9731.014, E_tot: 3024.0723, Temperature: 308.6424, Time: 116.63ms
+[MindSPONGE] Step: 1820, E_pot: -6740.918, E_kin: 9714.773, E_tot: 2973.8555, Temperature: 308.1273, Time: 117.62ms
+[MindSPONGE] Step: 1830, E_pot: -6915.49, E_kin: 9779.01, E_tot: 2863.5195, Temperature: 310.16473, Time: 121.11ms
+[MindSPONGE] Step: 1840, E_pot: -6671.6445, E_kin: 9631.083, E_tot: 2959.4385, Temperature: 305.47287, Time: 122.68ms
+[MindSPONGE] Step: 1850, E_pot: -6952.4805, E_kin: 9924.824, E_tot: 2972.3438, Temperature: 314.78955, Time: 124.28ms
+[MindSPONGE] Step: 1860, E_pot: -6847.9453, E_kin: 9792.127, E_tot: 2944.1816, Temperature: 310.58075, Time: 127.04ms
+[MindSPONGE] Step: 1870, E_pot: -6967.918, E_kin: 9849.933, E_tot: 2882.0146, Temperature: 312.4142, Time: 126.41ms
+[MindSPONGE] Step: 1880, E_pot: -6925.9785, E_kin: 9732.3, E_tot: 2806.3213, Temperature: 308.6832, Time: 128.71ms
+[MindSPONGE] Step: 1890, E_pot: -6919.0645, E_kin: 9681.998, E_tot: 2762.9336, Temperature: 307.08777, Time: 129.37ms
+[MindSPONGE] Step: 1900, E_pot: -7014.535, E_kin: 9796.58, E_tot: 2782.045, Temperature: 310.722, Time: 131.93ms
+[MindSPONGE] Step: 1910, E_pot: -6973.6113, E_kin: 9708.633, E_tot: 2735.0215, Temperature: 307.93253, Time: 133.95ms
+[MindSPONGE] Step: 1920, E_pot: -6972.9023, E_kin: 9723.678, E_tot: 2750.7754, Temperature: 308.4097, Time: 53.63ms
+[MindSPONGE] Step: 1930, E_pot: -6937.1777, E_kin: 9786.215, E_tot: 2849.037, Temperature: 310.39322, Time: 57.25ms
+[MindSPONGE] Step: 1940, E_pot: -7053.164, E_kin: 9886.491, E_tot: 2833.3271, Temperature: 313.57373, Time: 58.91ms
+[MindSPONGE] Step: 1950, E_pot: -7093.6797, E_kin: 9824.265, E_tot: 2730.585, Temperature: 311.6001, Time: 58.91ms
+[MindSPONGE] Step: 1960, E_pot: -7055.992, E_kin: 9794.519, E_tot: 2738.5264, Temperature: 310.65662, Time: 58.69ms
+[MindSPONGE] Step: 1970, E_pot: -7061.1133, E_kin: 9786.344, E_tot: 2725.2305, Temperature: 310.39734, Time: 60.59ms
+[MindSPONGE] Step: 1980, E_pot: -6812.7637, E_kin: 9585.873, E_tot: 2773.1094, Temperature: 304.0389, Time: 62.53ms
+[MindSPONGE] Step: 1990, E_pot: -6858.043, E_kin: 9589.639, E_tot: 2731.5957, Temperature: 304.15836, Time: 62.78ms
+[MindSPONGE] Finished simulation at 2025-02-25 17:51:35
+[MindSPONGE] Simulation time: 1 minutes 38.4 seconds.
+--------------------------------------------------------------------------------

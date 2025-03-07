@@ -27,7 +27,7 @@ AI for life science测评模块主要评测GPU集群进行AI模型推理的性�
 ## 测评工具怎么用？
 ### 准备环境
 1. slurm作业调度系统
-2. Python>=3.11， Python第三方库：matplotlib，numpy，snakemake(>=8.0.0)
+2. Python>=3.11， Python第三方库：matplotlib，numpy，statsmodels，tmtools，biopython，snakemake(>=8.0.0)
 3. 计算软件对应的版本cuda：cuda-11.6（MindSPONGE），cuda-12.6（Alphafold3）
 4. 安装对应版本的测试软件，确保测试软件已正确安装，并将可执行文件添加到环境变量PATH中
     - [MindSPONGE](https://www.mindspore.cn/mindsponge/docs/zh-CN/r1.0.0-alpha/index.html): 1.0.0rc2

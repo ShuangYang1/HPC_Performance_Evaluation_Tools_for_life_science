@@ -17,12 +17,15 @@ def adf(data):
 
 
 def check(data1, data2):
-    mean1 = np.mean(data1)
-    mean2 = np.mean(data2)
-    std1 = np.std(data1, ddof=1)
-    std2 = np.std(data2, ddof=1)
-    sem1 = std1 / np.sqrt(len(data1))
-    sem2 = std2 / np.sqrt(len(data2))
+    start_index = len(data2) - len(data2) // 5
+    data1_b = data1[start_index:]
+    data2_b = data2[start_index:]
+    mean1 = np.mean(data1_b)
+    mean2 = np.mean(data2_b)
+    std1 = np.std(data1_b, ddof=1)
+    std2 = np.std(data2_b, ddof=1)
+    sem1 = std1 / np.sqrt(len(data1_b))
+    sem2 = std2 / np.sqrt(len(data2_b))
     if abs(mean1 - mean2) <= (sem1 + sem2):
         return True
     else:
