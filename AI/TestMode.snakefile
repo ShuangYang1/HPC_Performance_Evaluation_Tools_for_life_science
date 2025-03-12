@@ -9,6 +9,7 @@ with open("SoftwaresWeight.txt","r") as infile:
 import os
 from pathlib import Path
 from modules.TestMode.make_sbatch import make_sbatch
+from modules.TestMode.check_result import check_result
 from modules.submit import run_slurm_job
 pwd=os.getcwd()
 gpus=config.get("gpus")
@@ -27,11 +28,16 @@ rule all:
     input:
         expand("{pwd}/log/{mode}/{software}/run.done",mode=mode,software=softwares,pwd=pwd)
     run:
+        success=[]
         for software in softwares:
             if os.path.exists(f"{pwd}/log/{mode}/{software}/run.err"):
                 print(f"{software} failed")
                 os.system(f"rm {pwd}/log/{mode}/{software}/run.err")
                 os.system(f"rm {pwd}/log/{mode}/{software}/run.done")
+            else:
+                success.append(software)
+        for software in success:
+            check_result(software)
 
 rule mindsponge_test:
     input:
