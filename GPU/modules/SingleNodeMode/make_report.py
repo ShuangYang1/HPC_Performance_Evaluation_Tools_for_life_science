@@ -245,7 +245,8 @@ def get_filesystem_info():
 def cal_speedup(gpu_list, time_list, gputime_list, performance_list):
     table = "| 使用的GPU数量 | 分子动力学模拟性能（ns/day） | 加速比 | 计算效率 | 计算用时（s） | GPU卡时（s） |\n| ---- | ---- | ---- | ---- | ---- | ---- |\n"
     for i in range(len(gpu_list)):
-        table += f"| {gpu_list[i]} | {round(performance_list[i], 2)} | {round(performance_list[i] / performance_list[0], 2)} | {round(performance_list[i] / performance_list[0] / gpu_list[i] * 100, 2)}% | {round(time_list[i], 2)} | {round(gputime_list[i], 2)} |\n"
+        # table += f"| {gpu_list[i]} | {round(performance_list[i], 2)} | {round(performance_list[i] / performance_list[0], 2)} | {round(performance_list[i] / performance_list[0] / gpu_list[i] * 100, 2)}% | {round(time_list[i], 2)} | {round(gputime_list[i], 2)} |\n"
+        table += f"| {gpu_list[i]} | {round(time_list[i], 2)} | {round(time_list[0] / time_list[i], 2)} | {round(time_list[0] / time_list[i] / gpu_list[i] * 100, 2)}% | {round(performance_list[i], 2)} | {round(gputime_list[i], 2)} |\n"
     return table
 
 
@@ -641,7 +642,7 @@ def sponge_report(
     total_score = round(
         np.mean(
             [
-                singletask_score,
+                # singletask_score,
                 multitasks_time_score,
                 multitasks_energy_score,
             ]
@@ -661,28 +662,30 @@ def sponge_report(
     content += "2. 单任务计算用时稳定性分析。多次测试相同单任务的计算用时，统计计算用时分布，输出小提琴图。本指标是为了测试被测节点的软硬件环境是否存在较大的性能波动。\n"
     content += "3. 大批量任务运行特征分析。记录计算软件在大批量任务并行模式下的GPU、CPU、内存、I/O读写带宽等资源的使用情况和功耗，输出从任务运行到结束的资源使用情况雷达图，帮助用户了解软件在大批量任务并行模式下的资源需求特征、分析被测节点配置是否存在瓶颈。  \n\n"
     content += "&nbsp;\n"
-    content += f"计算当前测试环境下软件性能得分。本测评根据单任务性能得分、计算用时稳定性得分、大批量任务计算用时得分、大批量任务计算能耗得分等四个细分指标的综合计算，得到单节点的{software}性能总分。  \n"
+    content += f"计算当前测试环境下软件性能得分。本测评根据计算用时稳定性得分、大批量任务计算用时得分、大批量任务计算能耗得分三个细分指标的综合计算，得到单节点的{software}性能总分。  \n"
     content += "$$\n"
-    content += "总得分=avg(单任务性能得分+大批量任务计算用时得分+大批量任务计算能耗得分)\\times\\frac{计算用时稳定性得分}{100}\n"
+    content += "总得分=avg(大批量任务计算用时得分+大批量任务计算能耗得分)\\times\\frac{计算用时稳定性得分}{100}\n"
     content += "$$\n"
-    content += "四个细分指标详述如下：  \n"
-    content += "① 单任务性能得分：根据多次相同单任务的平均分子动力学模拟性能计算。  \n"
+    content += "三个细分指标详述如下：  \n"
+    content += "① 计算用时稳定性得分：根据多次相同单任务的用时分布计算。  \n"
     content += "$$\n"
-    content += "单任务性能得分={系数}\\times{分子动力学模拟性能}\n"
-    content += "$$\n"
-    content += "② 计算用时稳定性得分：根据多次相同单任务的用时分布计算。  \n"
-    content += "$$\n"
+    content += "\\begin{align*}\n"
     content += "单任务计算用时稳定性得分=max((1-\\frac{计算用时标准差}{计算用时均值})\\times100,0)\n"
+    content += "\\end{align*}\n"
     content += "$$\n"
-    content += "③ 大批量任务计算用时得分：根据大批量任务并行的总用时计算。  \n"
+    content += "② 大批量任务计算用时得分：根据大批量任务并行的总用时计算。  \n"
     content += "$$\n"
+    content += "\\begin{align*}\n"
     content += "大批量任务计算用时得分=系数\\times\\frac{任务数量}{计算总用时}\n"
+    content += "\\end{align*}\n"
     content += "$$\n"
-    content += "④ 大批量任务计算能耗得分：根据大批量任务并行的总能耗计算。  \n"
+    content += "③ 大批量任务计算能耗得分：根据大批量任务并行的总能耗计算。  \n"
     content += "$$\n"
+    content += "\\begin{align*}\n"
     content += "大批量任务计算能耗得分=系数\\times\\frac{任务数量}{计算总能耗}\n"
+    content += "\\end{align*}\n"
     content += "$$\n"
-    content += "注：系数以一个标准配置为基准（100分）来确定，测试环境的最终得分为相对于标准配置的相对得分。分子动力学模拟性能为分子动力学模拟软件常用的性能指标，单位为ns/day，表示在当前系统配置和环境以及输入参数条件下每天能够模拟的纳秒数，该值越大代表单位时间内能完成更长时间的分子动力学模拟，代表整体系统性能更好。  \n"
+    content += "注：系数以一个标准配置为基准（100分）来确定，测试环境的最终得分为相对于标准配置的相对得分。  \n"
     content += "&nbsp;\n"
 
     content += '<div STYLE="page-break-after: always;"></div>\n\n'
@@ -926,7 +929,7 @@ def sponge_report(
     content += '<div STYLE="page-break-after: always;"></div>\n\n'
     content += "### 节点性能打分：\n"
     content += f"测试软件：{software}  \n"
-    content += f"单任务性能得分：{singletask_score}  \n"
+    # content += f"单任务性能得分：{singletask_score}  \n"
     content += f"单任务计算用时稳定性得分：{stability_score}  \n"
     content += f"大批量任务计算用时得分：{multitasks_time_score}  \n"
     content += f"大批量任务计算能耗得分：{multitasks_energy_score}  \n"
@@ -1143,7 +1146,7 @@ def gromacs_report(
     total_score = round(
         np.mean(
             [
-                singletask_score,
+                # singletask_score,
                 multitasks_time_score,
                 multitasks_energy_score,
             ]
@@ -1162,39 +1165,43 @@ def gromacs_report(
     content += "1. 单任务运行特征分析。记录软件计算时对GPU、CPU、内存、I/O读写带宽等资源的使用情况和功耗，输出从任务运行到结束的资源使用情况雷达图，帮助用户了解软件资源需求特征、分析被测节点配置是否存在瓶颈。\n"
     content += "2. 单任务并行效率分析。使用不同数量的GPU卡运行相同算例，统计计算用时、GPU卡时和分子动力学模拟性能，计算使用不同数量GPU卡的加速比和计算效率。通过本指标的评测，可以得知计算用时最少的单任务并行策略以及计算卡时最少的单任务并行策略。  \n\n"
     content += "$$\n"
-    content += "\\begin{align}\n"
+    content += "\\begin{align*}\n"
     content += (
-        "加速比&=\\frac{该GPU卡数的分子动力学模拟性能}{单卡分子动力学模拟性能}\\\\\n"
+        "加速比&=\\frac{单线程计算用时}{该线程数计算用时}\\\\\n"
     )
     content += "计算效率&=\\frac{加速比}{GPU卡数}*100\\%\n"
-    content += "\\end{align}\n"
+    content += "\\end{align*}\n"
     content += "$$\n"
     content += "3. 单任务计算用时稳定性分析。多次测试相同单任务的计算用时，统计计算用时分布，输出小提琴图。本指标是为了测试被测节点的软硬件环境是否存在较大的性能波动。\n"
     content += "4. 大批量任务并行效率分析。使用不同GPU卡数×并行任务数的组合测试计算软件大批量任务并行计算。输出不同运行模式计算用时的折线图，以及在目前节点配置下大批量任务并行时最佳并行模式。通过本指标的评测，可以得知在何种并行策略下大批量任务的计算总用时最少。\n"
     content += "5. 大批量任务运行特征分析。记录计算软件在大批量任务并行模式下的GPU、CPU、内存、I/O读写带宽等资源的使用情况和功耗，输出从任务运行到结束的资源使用情况雷达图，帮助用户了解软件在大批量任务并行模式下的资源需求特征、分析被测节点配置是否存在瓶颈。  \n\n"
     content += "&nbsp;\n"
-    content += f"计算当前测试环境下软件性能得分。本测评根据单任务性能得分、计算用时稳定性得分、大批量任务计算用时得分、大批量任务计算能耗得分等四个细分指标的综合计算，得到单节点的{software}性能总分。  \n"
+    content += f"计算当前测试环境下软件性能得分。本测评根据计算用时稳定性得分、大批量任务计算用时得分、大批量任务计算能耗得分三个细分指标的综合计算，得到单节点的{software}性能总分。  \n"
     content += "$$\n"
-    content += "总得分=avg(单任务性能得分+大批量任务计算用时得分+大批量任务计算能耗得分)\\times\\frac{计算用时稳定性得分}{100}\n"
+    content += "\\begin{align*}\n"
+    content += "总得分=avg(大批量任务计算用时得分+大批量任务计算能耗得分)\\times\\frac{计算用时稳定性得分}{100}\n"
+    content += "\\end{align*}\n"
     content += "$$\n"
-    content += "四个细分指标详述如下：  \n"
-    content += "① 单任务性能得分：根据多次相同单任务的平均分子动力学模拟性能计算。  \n"
+    content += "三个细分指标详述如下：  \n"
+    content += "① 计算用时稳定性得分：根据多次相同单任务的用时分布计算。  \n"
     content += "$$\n"
-    content += "单任务性能得分={系数}\\times{分子动力学模拟性能}\n"
-    content += "$$\n"
-    content += "② 计算用时稳定性得分：根据多次相同单任务的用时分布计算。  \n"
-    content += "$$\n"
+    content += "\\begin{align*}\n"
     content += "单任务计算用时稳定性得分=max((1-\\frac{计算用时标准差}{计算用时均值})\\times100,0)\n"
+    content += "\\end{align*}\n"
     content += "$$\n"
-    content += "③ 大批量任务计算用时得分：根据大批量任务并行的总用时计算。  \n"
+    content += "② 大批量任务计算用时得分：根据大批量任务并行的总用时计算。  \n"
     content += "$$\n"
+    content += "\\begin{align*}\n"
     content += "大批量任务计算用时得分=系数\\times\\frac{任务数量}{计算总用时}\n"
+    content += "\\end{align*}\n"
     content += "$$\n"
-    content += "④ 大批量任务计算能耗得分：根据大批量任务并行的总能耗计算。  \n"
+    content += "③ 大批量任务计算能耗得分：根据大批量任务并行的总能耗计算。  \n"
     content += "$$\n"
+    content += "\\begin{align*}\n"
     content += "大批量任务计算能耗得分=系数\\times\\frac{任务数量}{计算总能耗}\n"
+    content += "\\end{align*}\n"
     content += "$$\n"
-    content += "注：系数以一个标准配置为基准（100分）来确定，测试环境的最终得分为相对于标准配置的相对得分。分子动力学模拟性能为分子动力学模拟软件常用的性能指标，单位为ns/day，表示在当前系统配置和环境以及输入参数条件下每天能够模拟的纳秒数，该值越大代表单位时间内能完成更长时间的分子动力学模拟，代表整体系统性能更好。  \n"
+    content += "注：系数以一个标准配置为基准（100分）来确定，测试环境的最终得分为相对于标准配置的相对得分。  \n"
     content += "&nbsp;\n"
 
     content += '<div STYLE="page-break-after: always;"></div>\n\n'
@@ -1479,7 +1486,7 @@ def gromacs_report(
     content += '<div STYLE="page-break-after: always;"></div>\n\n'
     content += "### 节点性能打分：\n"
     content += f"测试软件：{software}  \n"
-    content += f"单任务性能得分：{singletask_score}  \n"
+    # content += f"单任务性能得分：{singletask_score}  \n"
     content += f"单任务计算用时稳定性得分：{stability_score}  \n"
     content += f"大批量任务计算用时得分：{multitasks_time_score}  \n"
     content += f"大批量任务计算能耗得分：{multitasks_energy_score}  \n"
@@ -1704,7 +1711,7 @@ def amber_report(
     total_score = round(
         np.mean(
             [
-                singletask_score,
+                # singletask_score,
                 multitasks_time_score,
                 multitasks_energy_score,
             ]
@@ -1724,39 +1731,43 @@ def amber_report(
     content += "1. 单任务运行特征分析。记录软件计算时对GPU、CPU、内存、I/O读写带宽等资源的使用情况和功耗，输出从任务运行到结束的资源使用情况雷达图，帮助用户了解软件资源需求特征、分析被测节点配置是否存在瓶颈。\n"
     content += "2. 单任务并行效率分析。使用不同数量的GPU卡运行相同算例，统计计算用时、GPU卡时和分子动力学模拟性能，计算使用不同数量GPU卡的加速比和计算效率。通过本指标的评测，可以得知计算用时最少的单任务并行策略以及计算卡时最少的单任务并行策略。  \n\n"
     content += "$$\n"
-    content += "\\begin{align}\n"
+    content += "\\begin{align*}\n"
     content += (
-        "加速比&=\\frac{该GPU卡数的分子动力学模拟性能}{单卡分子动力学模拟性能}\\\\\n"
+        "加速比&=\\frac{单线程计算用时}{该线程数计算用时}\\\\\n"
     )
     content += "计算效率&=\\frac{加速比}{GPU卡数}*100\\%\n"
-    content += "\\end{align}\n"
+    content += "\\end{align*}\n"
     content += "$$\n"
     content += "3. 单任务计算用时稳定性分析。多次测试相同单任务的计算用时，统计计算用时分布，输出小提琴图。本指标是为了测试被测节点的软硬件环境是否存在较大的性能波动。\n"
     content += "4. 大批量任务并行效率分析。使用不同GPU卡数×并行任务数的组合测试计算软件大批量任务并行计算。输出不同运行模式计算用时的折线图，以及在目前节点配置下大批量任务并行时最佳并行模式。通过本指标的评测，可以得知在何种并行策略下大批量任务的计算总用时最少。\n"
     content += "5. 大批量任务运行特征分析。记录计算软件在大批量任务并行模式下的GPU、CPU、内存、I/O读写带宽等资源的使用情况和功耗，输出从任务运行到结束的资源使用情况雷达图，帮助用户了解软件在大批量任务并行模式下的资源需求特征、分析被测节点配置是否存在瓶颈。  \n\n"
     content += "&nbsp;\n"
-    content += f"计算当前测试环境下软件性能得分。本测评根据单任务性能得分、计算用时稳定性得分、大批量任务计算用时得分、大批量任务计算能耗得分等四个细分指标的综合计算，得到单节点的{software}性能总分。  \n"
+    content += f"计算当前测试环境下软件性能得分。本测评根据计算用时稳定性得分、大批量任务计算用时得分、大批量任务计算能耗得分三个细分指标的综合计算，得到单节点的{software}性能总分。  \n"
     content += "$$\n"
-    content += "总得分=avg(单任务性能得分+大批量任务计算用时得分+大批量任务计算能耗得分)\\times\\frac{计算用时稳定性得分}{100}\n"
+    content += "\\begin{align*}\n"
+    content += "总得分=avg(大批量任务计算用时得分+大批量任务计算能耗得分)\\times\\frac{计算用时稳定性得分}{100}\n"
+    content += "\\end{align*}\n"
     content += "$$\n"
-    content += "四个细分指标详述如下：  \n"
-    content += "① 单任务性能得分：根据多次相同单任务的平均分子动力学模拟性能计算。  \n"
+    content += "三个细分指标详述如下：  \n"
+    content += "① 计算用时稳定性得分：根据多次相同单任务的用时分布计算。  \n"
     content += "$$\n"
-    content += "单任务性能得分={系数}\\times{分子动力学模拟性能}\n"
-    content += "$$\n"
-    content += "② 计算用时稳定性得分：根据多次相同单任务的用时分布计算。  \n"
-    content += "$$\n"
+    content += "\\begin{align*}\n"
     content += "单任务计算用时稳定性得分=max((1-\\frac{计算用时标准差}{计算用时均值})\\times100,0)\n"
+    content += "\\end{align*}\n"
     content += "$$\n"
-    content += "③ 大批量任务计算用时得分：根据大批量任务并行的总用时计算。  \n"
+    content += "② 大批量任务计算用时得分：根据大批量任务并行的总用时计算。  \n"
     content += "$$\n"
+    content += "\\begin{align*}\n"
     content += "大批量任务计算用时得分=系数\\times\\frac{任务数量}{计算总用时}\n"
+    content += "\\end{align*}\n"
     content += "$$\n"
-    content += "④ 大批量任务计算能耗得分：根据大批量任务并行的总能耗计算。  \n"
+    content += "③ 大批量任务计算能耗得分：根据大批量任务并行的总能耗计算。  \n"
     content += "$$\n"
+    content += "\\begin{align*}\n"
     content += "大批量任务计算能耗得分=系数\\times\\frac{任务数量}{计算总能耗}\n"
+    content += "\\end{align*}\n"
     content += "$$\n"
-    content += "注：系数以一个标准配置为基准（100分）来确定，测试环境的最终得分为相对于标准配置的相对得分。分子动力学模拟性能为分子动力学模拟软件常用的性能指标，单位为ns/day，表示在当前系统配置和环境以及输入参数条件下每天能够模拟的纳秒数，该值越大代表单位时间内能完成更长时间的分子动力学模拟，代表整体系统性能更好。  \n"
+    content += "注：系数以一个标准配置为基准（100分）来确定，测试环境的最终得分为相对于标准配置的相对得分。  \n"
     content += "&nbsp;\n"
 
     content += '<div STYLE="page-break-after: always;"></div>\n\n'
@@ -2035,7 +2046,7 @@ def amber_report(
     content += '<div STYLE="page-break-after: always;"></div>\n\n'
     content += "### 节点性能打分：\n"
     content += f"测试软件：{software}  \n"
-    content += f"单任务性能得分：{singletask_score}  \n"
+    # content += f"单任务性能得分：{singletask_score}  \n"
     content += f"单任务计算用时稳定性得分：{stability_score}  \n"
     content += f"大批量任务计算用时得分：{multitasks_time_score}  \n"
     content += f"大批量任务计算能耗得分：{multitasks_energy_score}  \n"
@@ -2192,7 +2203,7 @@ def dsdp_report(
     total_score = round(
         np.mean(
             [
-                singletask_score,
+                # singletask_score,
                 multitasks_time_score,
                 multitasks_energy_score,
             ]
@@ -2213,26 +2224,30 @@ def dsdp_report(
     content += "2. 单任务计算用时稳定性分析。多次测试相同单任务的计算用时，统计计算用时分布，输出小提琴图。本指标是为了测试被测节点的软硬件环境是否存在较大的性能波动。\n"
     content += "3. 大批量任务运行特征分析。记录计算软件在大批量任务并行模式下的GPU、CPU、内存、I/O读写带宽等资源的使用情况和功耗，输出从任务运行到结束的资源使用情况雷达图，帮助用户了解软件在大批量任务并行模式下的资源需求特征、分析被测节点配置是否存在瓶颈。  \n\n"
     content += "&nbsp;\n"
-    content += f"计算当前测试环境下软件性能得分。本测评根据单任务性能得分、计算用时稳定性得分、大批量任务计算用时得分、大批量任务计算能耗得分等四个细分指标的综合计算，得到单节点的{software}性能总分。  \n"
+    content += f"计算当前测试环境下软件性能得分。本测评根据计算用时稳定性得分、大批量任务计算用时得分、大批量任务计算能耗得分三个细分指标的综合计算，得到单节点的{software}性能总分。  \n"
     content += "$$\n"
-    content += "总得分=avg(单任务性能得分+大批量任务计算用时得分+大批量任务计算能耗得分)\\times\\frac{计算用时稳定性得分}{100}\n"
+    content += "\\begin{align*}\n"
+    content += "总得分=avg(大批量任务计算用时得分+大批量任务计算能耗得分)\\times\\frac{计算用时稳定性得分}{100}\n"
+    content += "\\end{align*}\n"
     content += "$$\n"
-    content += "四个细分指标详述如下：  \n"
-    content += "① 单任务性能得分：根据多次相同单任务的平均分子动力学模拟性能计算。  \n"
+    content += "三个细分指标详述如下：  \n"
+    content += "① 计算用时稳定性得分：根据多次相同单任务的用时分布计算。  \n"
     content += "$$\n"
-    content += "单任务性能得分=\\frac{系数}{单任务计算用时}\n"
-    content += "$$\n"
-    content += "② 计算用时稳定性得分：根据多次相同单任务的用时分布计算。  \n"
-    content += "$$\n"
+    content += "\\begin{align*}\n"
     content += "单任务计算用时稳定性得分=max((1-\\frac{计算用时标准差}{计算用时均值})\\times100,0)\n"
+    content += "\\end{align*}\n"
     content += "$$\n"
-    content += "③ 大批量任务计算用时得分：根据大批量任务并行的总用时计算。  \n"
+    content += "② 大批量任务计算用时得分：根据大批量任务并行的总用时计算。  \n"
     content += "$$\n"
+    content += "\\begin{align*}\n"
     content += "大批量任务计算用时得分=系数\\times\\frac{任务数量}{计算总用时}\n"
+    content += "\\end{align*}\n"
     content += "$$\n"
-    content += "④ 大批量任务计算能耗得分：根据大批量任务并行的总能耗计算。  \n"
+    content += "③ 大批量任务计算能耗得分：根据大批量任务并行的总能耗计算。  \n"
     content += "$$\n"
+    content += "\\begin{align*}\n"
     content += "大批量任务计算能耗得分=系数\\times\\frac{任务数量}{计算总能耗}\n"
+    content += "\\end{align*}\n"
     content += "$$\n"
     content += "注：系数以一个标准配置为基准（100分）来确定，测试环境的最终得分为相对于标准配置的相对得分。  \n"
     content += "&nbsp;\n"
@@ -2478,7 +2493,7 @@ def dsdp_report(
     content += '<div STYLE="page-break-after: always;"></div>\n\n'
     content += "### 节点性能打分：\n"
     content += f"测试软件：{software}  \n"
-    content += f"单任务性能得分：{singletask_score}  \n"
+    # content += f"单任务性能得分：{singletask_score}  \n"
     content += f"单任务计算用时稳定性得分：{stability_score}  \n"
     content += f"大批量任务计算用时得分：{multitasks_time_score}  \n"
     content += f"大批量任务计算能耗得分：{multitasks_energy_score}  \n"
@@ -2503,7 +2518,7 @@ def generate_report(
     content += "针对生命科学计算的高性能集群性能分析及评测框架，使用代表性生物学计算软件集合，通过Prometheus监控软件对运行时CPU、GPU、内存、IO等资源需求特征进行监控，使用计算用时、计算效率、CPU核时、GPU卡时等关键评价指标对集群性能进行测评和打分，帮助指导生命科学计算集群的建设、提升生命科学计算生产效率。  \n"
     content += "单节点深度测评报告中每款计算软件的测试内容和测试结果分为两大部分：  \n"
     content += "1. 运行特征及运行模式分析。包括单任务和大批量任务作业的运行特征分析、单任务使用不同数量GPU卡的并行计算效率分析（部分不支持多卡并行的软件除外）、大批量任务不同并行规模性能分析（部分不支持多卡并行的软件除外）、单任务计算用时稳定性分析等。这些分析结果用于帮助用户评估相关计算软件在测试节点上运行是否存在瓶颈、分析在测试节点配置下最高效或最经济的运行模式。\n"
-    content += "2. 节点配置性能打分。使用运行模式分析中的计算用时、计算能耗、计算用时稳定性、分子动力学模拟性能（仅限分子动力学模拟软件）等指标进行多维度打分，并计算该软件在测试节点配置下的性能综合得分。  \n\n"
+    content += "2. 节点配置性能打分。使用运行模式分析中的计算用时、计算能耗、计算用时稳定性等指标进行多维度打分，并计算该软件在测试节点配置下的性能综合得分。  \n\n"
     content += "&nbsp;\n"
     content += "&nbsp;\n"
 

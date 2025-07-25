@@ -31,6 +31,8 @@ def make_sbatch(
         f.write("#SBATCH --output={}\n".format(output_path))
         f.write("#SBATCH --error={}\n".format(error_path))
         f.write("#SBATCH --time=7-00:00:00\n")
+        f.write("#SBATCH --cpu-bind=cores\n")
+        f.write("#SBATCH --mem-bind=local\n")
         f.write("\n")
         f.write(f"mkdir -p {resultdir}\n")
         f.write(f"cd {resultdir}\n")

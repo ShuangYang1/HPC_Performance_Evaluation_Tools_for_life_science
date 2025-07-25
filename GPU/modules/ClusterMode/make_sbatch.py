@@ -90,6 +90,8 @@ def make_multitasks(
         f.write(f"#SBATCH --array=1-{multitasks_count}\n")
         f.write(f"#SBATCH --nodelist={nodelist}\n")
         f.write("#SBATCH --time=7-00:00:00\n")
+        f.write("#SBATCH --cpu-bind=cores\n")
+        f.write("#SBATCH --mem-bind=local\n")
         f.write("\n")
         f.write(f'WORKDIR="{resultdir}/${{SLURM_ARRAY_TASK_ID}}"\n')
         f.write("mkdir -p $WORKDIR\n")

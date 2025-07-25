@@ -52,12 +52,18 @@ def make_singletask(
         f.write("#SBATCH --partition={}\n".format(partition))
         f.write("#SBATCH --nodes={}\n".format(nodes))
         f.write("#SBATCH --ntasks={}\n".format(ntasks))
-        f.write("#SBATCH --cpus-per-task={}\n".format(cpus))
+        if software == "Bismark":
+            f.write("#SBATCH --cpus-per-task={}\n".format(cpus_per_task * 4))
+        else:
+            f.write("#SBATCH --cpus-per-task={}\n".format(cpus_per_task))
         f.write("#SBATCH --job-name={}\n".format(software))
         f.write("#SBATCH --output={}\n".format(output_path))
         f.write("#SBATCH --error={}\n".format(error_path))
         f.write(f"#SBATCH --nodelist={nodelist}\n")
         f.write("#SBATCH --time=7-00:00:00\n")
+        f.write("#SBATCH --exclusive\n")
+        f.write("#SBATCH --cpu-bind=cores\n")
+        f.write("#SBATCH --mem-bind=local\n")
         f.write("\n")
         f.write(f'WORKDIR="{resultdir}/{cpus_per_task}"\n')
         f.write("mkdir -p $WORKDIR\n")
@@ -137,13 +143,19 @@ def make_singletask_repeat(
         f.write("#SBATCH --partition={}\n".format(partition))
         f.write("#SBATCH --nodes={}\n".format(nodes))
         f.write("#SBATCH --ntasks={}\n".format(ntasks))
-        f.write("#SBATCH --cpus-per-task={}\n".format(cpus))
+        if software == "Bismark":
+            f.write("#SBATCH --cpus-per-task={}\n".format(cpus_per_task * 4))
+        else:
+            f.write("#SBATCH --cpus-per-task={}\n".format(cpus_per_task))
         f.write("#SBATCH --job-name={}_repeat\n".format(software))
         f.write("#SBATCH --output={}\n".format(output_path))
         f.write("#SBATCH --error={}\n".format(error_path))
         f.write(f"#SBATCH --array=2-{repeat}\n")
         f.write(f"#SBATCH --nodelist={nodelist}\n")
         f.write("#SBATCH --time=7-00:00:00\n")
+        f.write("#SBATCH --exclusive\n")
+        f.write("#SBATCH --cpu-bind=cores\n")
+        f.write("#SBATCH --mem-bind=local\n")
         f.write("\n")
         f.write(f'WORKDIR="{resultdir}/{cpus_per_task}_${{SLURM_ARRAY_TASK_ID}}"\n')
         f.write("mkdir -p $WORKDIR\n")
@@ -232,6 +244,10 @@ def make_multitasks(
         f.write(f"#SBATCH --array=1-{multitasks_count}\n")
         f.write(f"#SBATCH --nodelist={nodelist}\n")
         f.write("#SBATCH --time=7-00:00:00\n")
+        f.write("#SBATCH --cpu-bind=cores\n")
+        f.write("#SBATCH --mem-bind=local\n")
+        if software == "GATK":
+            f.write("#SBATCH --mem=10G\n")
         f.write("\n")
         f.write(
             f'WORKDIR="{resultdir}/{cpus_per_task}_{parallel}/${{SLURM_ARRAY_TASK_ID}}"\n'

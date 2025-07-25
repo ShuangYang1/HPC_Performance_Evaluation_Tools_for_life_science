@@ -132,7 +132,7 @@ def submit_singlenode_multitasks(
             print("sbatch done")
         else:
             job_id = submit_sbatch_job(
-                f"sbatch --dependency=afterok:{','.join(node_jobs)} {multitasks_script_path}"
+                f"sbatch --dependency=afterany:{','.join(node_jobs)} {multitasks_script_path}"
             )
             print("sbatch -d done")
         print(f"Job {job_id} submitted successfully.")

@@ -263,9 +263,9 @@ def make_eff_bar(softwares, effs):
     plt.barh(y_pos, effs, height=0.4, color="skyblue", align="center")
     plt.title("集群综合扩展效率", fontproperties=my_font)
     plt.xlim(0, 120)
-    plt.xlabel("集群综合扩展效率（%）")
+    plt.xlabel("集群综合扩展效率（%）",fontproperties=my_font)
     plt.yticks(y_pos, softwares)
-    plt.axvline(x=100, color="r", linestyle="--", linewidth=1.5)
+    # plt.axvline(x=100, color="r", linestyle="--", linewidth=1.5)
     for i, v in enumerate(effs):
         plt.text(v + 1, i, str(v), color="black", va="center")
     plt.savefig(bar_path)
@@ -285,10 +285,10 @@ def generate_report(
     singlenode_scores,
 ):
     content = "# 集群测评报告\n"
-    content += "针对生命科学计算的高性能集群性能分析及评测框架，使用代表性生物学计算软件集合，通过Qmon监控软件对运行时CPU、内存、IO等资源需求特征进行监控，使用计算用时、计算效率、CPU核时等关键评价指标对集群性能进行测评和打分，帮助指导生命科学计算集群的建设、提升生命科学计算生产效率。  \n"
+    content += "针对生命科学计算的高性能集群性能分析及评测框架，使用代表性生物学计算软件集合，通过Prometheus监控软件对运行时CPU、内存、IO等资源需求特征进行监控，使用计算用时、计算效率、CPU核时等关键评价指标对集群性能进行测评和打分，帮助指导生命科学计算集群的建设、提升生命科学计算生产效率。  \n"
     content += "在运行集群测评之前，建议先进行单节点深度测评，了解软件运行特征和最高效的运行模式，使用每款软件最高效的运行模式进行集群测评。集群测评模式对每款计算软件在集群大规模并行计算时的运行特征、计算效率进行分析，用于评估计算软件在目前集群配置下运行是否存在瓶颈以及计算软件在目前集群配置下的计算效率。  \n"
     content += "每款软件包括以下结果：  \n"
-    content += "1. 集群资源使用情况分析。使用Qmon监控软件记录计算软件在集群大规模计算时的资源使用情况，分析CPU、内存、I/O读写带宽的使用情况，输出计算软件计算全程的资源使用情况雷达图。每款计算软件会输出两张雷达图，第一张图是将各个指标缩放到0-100并在同一比例尺下对比展示，第二张图将雷达图分成若干层级，从内向外不同层级分别展示一个指标的变化情况。两幅图的指标和数据都是相同的，都是从顶端顺时针方向为起始，只是展示形式不同。\n"
+    content += "1. 集群资源使用情况分析。使用Prometheus监控软件记录计算软件在集群大规模计算时的资源使用情况，分析CPU、内存、I/O读写带宽的使用情况，输出计算软件计算全程的资源使用情况雷达图。每款计算软件会输出两张雷达图，第一张图是将各个指标缩放到0-100并在同一比例尺下对比展示，第二张图将雷达图分成若干层级，从内向外不同层级分别展示一个指标的变化情况。两幅图的指标和数据都是相同的，都是从顶端顺时针方向为起始，只是展示形式不同。\n"
     content += "2. 集群大规模并行计算打分。  \n"
     content += "$$\n"
     content += "\\begin{align*}\n"
@@ -503,7 +503,7 @@ def generate_report(
     score_bar_path = make_score_bar(softwares, scores)
     content += f"![score_bar]({score_bar_path})  \n"
     content += "&nbsp;\n"
-    content += f"### 集群综合扩展效率:{round(sum(effs) / len(effs), 2)}"
+    content += f"### 集群综合扩展效率：{round(sum(effs) / len(effs), 2)}"
     eff_bar_path = make_eff_bar(softwares, effs)
     content += f"![eff_bar]({eff_bar_path})  \n"
     content += "&nbsp;\n"
